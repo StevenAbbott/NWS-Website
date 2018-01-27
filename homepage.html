@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<link rel="stylesheet" type="text/css" href="homepage.css">
+<head>
+	<title>Non-Profit</title>
+</head>
+<body>
+	<div id="mainHeader" class="header">
+		<h1>Nebula Web Solutions</h1>
+		<h3>Insert Mission Statement Here</h3>
+	</div>
+	<div class="tab">
+		<button class="tabHeader" onclick="changeTab(event, 'Home')">Home</button>
+		<button class="tabHeader" onclick="changeTab(event, 'About Us')">About Us</button>
+		<button class="tabHeader" onclick="changeTab(event, 'Past Projects')">Past Projects</button>
+		<button class="tabHeader" onclick="changeTab(event, 'FAQ')">FAQ</button>
+		<button class="tabHeader" onclick="changeTab(event, 'Contact Us')">Contact Us</button>
+	</div>
+	<div id="Home" class="tabContent">
+		<h2>Home</h2>
+		<p>Info about the home page</p>
+	</div>
+	<div id="About Us" class="tabContent">
+		<h2>About Us</h2>
+		<p>Info about us</p>
+		<br>
+	</div>
+	<div id="Past Projects" class="tabContent">
+		<h2>Past Projects</h2>
+		<p>Info about past projects</p>
+	</div>
+	<div id="FAQ" class="tabContent">
+		<h2>Frequently Asked Questions</h2>
+		<p>Info about frequently asked questions</p>
+	</div>
+	<div id="Contact Us" class="tabContent">
+		<h2>Contact Us</h2>
+		<p>Info about emails, phone numbers, and other means of contact</p>
+		<div ud="emailButton" class="emailButton">
+			<form method="post" action="mailto:nebcontactpoint@gmail.com?subject=Project Inquiry&body=Dear Nebula Web Solutions,%0A%0AWe have an inquiry about a project of yours." encrypt="text/plain">
+				<input type="submit" value="Email Us"></input>
+			</form>
+		</div>
+	</div>
+	<script type="text/javascript">
+		function changeTab(event, newTab) {
+			var tabContent = document.getElementsByClassName("tabContent");
+			for (var i = 0; i < tabContent.length; i++) {
+				tabContent[i].style.display = "none";
+			}
+			var tabHeader = document.getElementsByClassName("tabHeader");
+			for (var i = 0; i < tabHeader.length; i++) {
+				tabHeader[i].className = tabHeader[i].className.replace(" active", "");
+			}
+			document.getElementById(newTab).style.display = "block";
+			event.currentTarget.className += " active";
+		}
+	</script>
+</body>
+</html>

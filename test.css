@@ -1,0 +1,23 @@
+.tabContent {
+	height: 500px;
+	border: 1px solid #3498DB;
+}
+.tab {
+	position: fixed;
+	top: 0;
+	border: 1px solid #3498DB;
+	padding: 10px;
+	margin: 10px;
+	background-color: #85C1E9;
+	width: 100%;
+}
+.tab button:hover {
+	background-color: #5DADE2;
+}
+.tab button.active {
+	background-color: #3498DB;
+}
+body {
+	background-color: grey;
+	color: white;
+}

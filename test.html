@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Test</title>
+</head>
+<body>
+	<link rel="stylesheet" type="text/css" href="test.css">
+	<div id="mainHeader" class="header">
+		<h1>Nebula Web Solutions</h1>
+		<h3>Insert Mission Statement Here</h3>
+	</div>
+	<div class="tab">
+		<button class="tabHeader" onclick="">Home</button>
+		<button class="tabHeader" onclick="">About Us</button>
+		<button class="tabHeader" onclick="">Past Projects</button>
+		<button class="tabHeader" onclick="">FAQ</button>
+		<button class="tabHeader" onclick="">Contact Us</button>
+		<!-- <button class="tabHeader" onclick="document.getElementById('Home').scrollIntoView()">Home</button>
+		<button class="tabHeader" onclick="document.getElementById('About Us').scrollIntoView()">About Us</button>
+		<button class="tabHeader" onclick="document.getElementById('Past Projects').scrollIntoView()">Past Projects</button>
+		<button class="tabHeader" onclick="document.getElementById('FAQ').scrollIntoView()">FAQ</button>
+		<button class="tabHeader" onclick="document.getElementById('Contact Us').scrollIntoView()">Contact Us</button> -->
+	</div>
+	<div id="Home" class="tabContent">
+		<h2>Home</h2>
+		<p>Info about the home page</p>
+	</div>
+	<div id="About Us" class="tabContent">
+		<h2>About Us</h2>
+		<p>Info about us</p>
+	</div>
+	<div id="Past Projects" class="tabContent">
+		<h2>Past Projects</h2>
+		<p>Info about past projects</p>
+	</div>
+	<div id="FAQ" class="tabContent">
+		<h2>Frequently Asked Questions</h2>
+		<p>Info about frequently asked questions</p>
+	</div>
+	<div id="Contact Us" class="tabContent">
+		<h2>Contact Us</h2>
+		<p>Info about emails, phone numbers, and other means of contact</p>
+		<div ud="emailButton" class="emailButton">
+			<form method="post" action="mailto:nebcontactpoint@gmail.com?subject=Project Inquiry&body=Dear Nebula Web Solutions,%0A%0AWe have an inquiry about a project of yours." encrypt="text/plain">
+				<input type="submit" value="Email Us"></input>
+			</form>
+		</div>
+	</div>
+</body>
+<script type="text/javascript">
+	window.onscroll = function() {changeTabHeader()};
+	function changeTabHeader() {
+		var top = window.pageYOffset;
+	}
+
+	// window.onscroll = function() {moveTabHeader()};
+	// var tabHeader = document.getElementsByClass("tab")[0];
+	// var offset = tabHeader.offsetTop;
+	// function moveTabHeader() {
+	// 	if (window.pageYOffset >= offset) {
+	// 		tabHeader.classList.add("sticky");
+	// 	} else {
+	// 		tabHeader.classList.remove("sticky");
+	// 	}
+	// }
+</script>
+</html>
